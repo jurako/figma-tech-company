@@ -8,6 +8,7 @@ body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
+    font-weight: normal;
     color: #000;
 }
 
@@ -16,8 +17,51 @@ a {
     text-decoration: none;
 }
 
+li {
+    list-style-type: none;
+}
 
 
+
+.container {
+    width: 1495px;
+    margin: 0 auto;
+}
 
 
 /**********************Header*********************/
+.header__inner {
+    display: flex;
+    align-items: flex-end;
+    column-gap: 67px;
+    padding: 12px 0 11px;
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.header__contact-btn {
+    padding: 11px 23px 10px;
+
+    font-size: 14px;
+    line-height: 19px;
+    color: #fff;
+    text-transform: uppercase;
+
+    background: linear-gradient(180deg, #EB3F57 0%, #893944 100%);
+    box-shadow: 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5);
+    border-radius: 32px;
+
+    /* align-self: baseline; */
+}
+
+.menu__list {
+    display: flex;
+    column-gap: 72px;
+}
+
+.menu__list-link {
+    font-size: 20px;
+    line-height: 27px;
+}
