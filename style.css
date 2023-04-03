@@ -83,5 +83,10 @@ li {
     color: #EB3F57;
 }
 
+.menu__list-link,
+.header__contact-btn {
+    white-space: nowrap;
+}
+
 
 /**********************Footer*********************/
