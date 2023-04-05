@@ -38,6 +38,14 @@ li {
 
 /*Components*/
 
+/*Logo*/
+.logo {}
+
+.logo__img {
+    vertical-align: bottom;
+}
+
+
 /*Button*/
 .btn {
     padding: 11px 23px 10px;
@@ -77,7 +85,6 @@ li {
 
 
 
-
 /*Header*/
 .header__inner {
     display: flex;
@@ -86,10 +93,10 @@ li {
     padding: 12px 0 11px;
 }
 
-.header__logo {
+
+.header__logo> :first-child {
     margin-right: auto;
 }
-
 
 
 /*Footer*/
