@@ -29,24 +29,45 @@ li {
 
 
 
+
+/* General styles */
+
+/* Main container */
 .container {
     width: 1495px;
     margin: 0 auto;
     padding: 0 50px;
 }
 
+/* Align first flex-item to the left, the rest - to the right */
+.align-flex-item-left > :first-child {
+    margin-right: auto;
+}
 
-/*Components*/
+/* Stick footer to the bottom of the page */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
-/*Logo*/
-.logo {}
+.main {
+    flex-grow: 1;
+}
 
+
+
+
+
+/* Components */
+
+/* Logo */
 .logo__img {
     vertical-align: bottom;
 }
 
 
-/*Button*/
+/* Button */
 .btn {
     padding: 11px 23px 10px;
 
@@ -67,7 +88,7 @@ li {
     border-radius: 40px;
 }
 
-/*Navigation menu*/
+/* Navigation menu */
 .menu__list {
     display: flex;
     column-gap: 72px;
@@ -88,9 +109,41 @@ li {
     white-space: nowrap;
 }
 
+/* Title */
+.title {
+    color: #EB3F57;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 49px;
+    text-transform: uppercase;
+}
+
+/* Text */
+.text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+    color: #000;
+}
+
+.text--color-white {
+    color: #fff;
+}
 
 
-/*Header*/
+
+
+
+
+
+
+
+
+/* Sections */
+
+/* Header */
 .header__inner {
     display: flex;
     align-items: flex-end;
@@ -98,10 +151,66 @@ li {
     padding: 12px 0 11px;
 }
 
-
-.header__logo> :first-child {
-    margin-right: auto;
+/* Footer */
+.footer__top {
+    border-bottom: 1px solid #F0EDED;
 }
 
+.footer__inner {
+    display: flex;
+    align-items: flex-start;
+}
 
-/*Footer*/
+.footer__inner--top {
+    padding: 16px 0 6px;
+}
+
+.footer__inner--bottom {
+    padding: 3px 0 7px;
+}
+
+.footer__copyright,
+.footer__address {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.hero {
+    height: 100vh;
+
+    /* background: url('images/hero.jpg');
+    background-repeat: no-repeat; */
+
+    background: linear-gradient(104.58deg, #EB3F5E -2.26%, #110843 47.46%), url('images/hero.jpg') no-repeat;
+    opacity: 0.6;
+
+    position: relative;
+}
+
+.hero__gradient {
+    /* linear-gradient(180deg, rgba(53, 66, 103, 0.0001) 0%, #151824 95.04%), url("../images/hero-bg.png") no-repeat center center local; */
+    /* background: linear-gradient(104.58deg, #EB3F5E -2.26%, #110843 47.46%), url('images/hero.jpg') no-repeat;
+    opacity: 0.6; */
+}
+
+.hero__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    max-width: 970px;
+
+    text-align: center;
+}
+
+.hero__title {
+    padding-bottom: 8px;
+}
+
+.hero__text {
+    padding-bottom: 46px;
+}
