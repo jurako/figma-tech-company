@@ -139,8 +139,6 @@ li {
 
 
 
-
-
 /* Sections */
 
 /* Header */
@@ -177,40 +175,56 @@ li {
     line-height: 19px;
 }
 
-.hero {
-    height: 100vh;
-    position: relative;
 
-    background: url('images/hero.jpg');
+/* Top */
+.top {
+
+    /* Extra 100px for image bottom mask */
+    height: calc(100vh + 20px);
+
+    background: url('images/top-home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-.hero::after {
-    content: linear-gradient(104.58deg, #EB3F5E -2.26%, #110843 47.46%);
-    position: absolute;
-    left: 0;
-    right: 0;
-    opacity: 0.6;
-}
-
-.hero__inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    width: 100%;
-    max-width: 1070px;
-    padding: 0 50px;
 
     text-align: center;
 }
 
-.hero__title {
+.top__wrapper {
+    /* Extra 100px for image bottom mask */
+    height: calc(100vh + 20px);
+    background: linear-gradient(104.58deg, rgba(235, 63, 94, 0.6) -2.26%, rgba(17, 8, 67, 0.6) 47.46%);
+}
+
+.top__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    height: 85vh;
+    padding: 0 50px;
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.top__arrow {
+    cursor: pointer;
+}
+
+.top__title,
+.top__arrow {
+    margin-top: auto;
+}
+
+.top__title {
     padding-bottom: 8px;
 }
 
-.hero__text {
-    padding-bottom: 46px;
+.top__text {
+    margin-bottom: 46px;
+}
+
+.top__img-mask {
+    display: block;
+    width: 100%;
+    margin-top: -81px;
 }
