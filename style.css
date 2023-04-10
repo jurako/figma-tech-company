@@ -39,8 +39,10 @@ li {
     padding: 0 50px;
 }
 
-.container--overflow-right {
+.container--overflow--right {
     padding-right: 0;
+    /* margin-right: initial;
+    margin-left: auto; */
 }
 
 /* Align first flex-item to the left, the rest - to the right */
@@ -194,7 +196,7 @@ li {
     /* Extra 100px for image bottom mask */
     height: calc(100vh + 20px);
 
-    background: url('images/top-home.jpg');
+    background: url('images/home/top-home.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
