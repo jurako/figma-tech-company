@@ -39,6 +39,10 @@ li {
     padding: 0 50px;
 }
 
+.container--overflow-right {
+    padding-right: 0;
+}
+
 /* Align first flex-item to the left, the rest - to the right */
 .align-flex-item-left> :first-child {
     margin-right: auto;
@@ -49,6 +53,10 @@ li {
     display: flex;
     flex-direction: column;
     height: 100%;
+}
+
+.section-wrapper {
+    display: flex;
 }
 
 .main {
@@ -128,7 +136,7 @@ li {
     color: #000;
 }
 
-.text--color-white {
+.text--color--white {
     color: #fff;
 }
 
@@ -147,6 +155,10 @@ li {
     align-items: flex-end;
     column-gap: 67px;
     padding: 12px 0 11px;
+}
+
+.main {
+    background-color: #F5F5FA;
 }
 
 /* Footer */
@@ -226,5 +238,13 @@ li {
 .top__img-mask {
     display: block;
     width: 100%;
-    margin-top: -81px;
+    margin-top: -5.3%;
+}
+
+
+/* About us */
+.about {
+    height: 100vh;
+    padding-top: 130px;
+    background-color: lime;
 }
