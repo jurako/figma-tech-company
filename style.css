@@ -1,3 +1,8 @@
+:root {
+    --container: 1495px;
+    --scrollbar: 15px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -32,23 +37,6 @@ li {
 
 /* General styles */
 
-/* Main container */
-.container {
-    width: 1495px;
-    margin: 0 auto;
-    padding: 0 50px;
-}
-
-.container--overflow--right {
-    padding-right: 0;
-    /* margin-right: initial;
-    margin-left: auto; */
-}
-
-/* Align first flex-item to the left, the rest - to the right */
-.align-flex-item-left> :first-child {
-    margin-right: auto;
-}
 
 /* Stick footer to the bottom of the page */
 .wrapper {
@@ -57,14 +45,28 @@ li {
     height: 100%;
 }
 
-.section-wrapper {
-    display: flex;
-}
-
 .main {
     flex-grow: 1;
 }
 
+/* Main container */
+.container {
+    width: var(--container);
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.container--align--right {
+    width: auto;
+    margin-right: 0;
+    padding-right: 0;
+    margin-left: calc((100vw - var(--container) - var(--scrollbar)) / 2);
+}
+
+/* Align first flex-item to the left, the rest - to the right */
+.align-flex-item-left > :first-child {
+    margin-right: auto;
+}
 
 
 
@@ -98,6 +100,7 @@ li {
     border-radius: 40px;
 }
 
+
 /* Navigation menu */
 .menu__list {
     display: flex;
@@ -119,15 +122,26 @@ li {
     white-space: nowrap;
 }
 
-/* Title */
-.title {
-    color: #EB3F57;
+
+/* Titles */
+.title,
+.heading {
     font-style: normal;
-    font-weight: 700;
     font-size: 36px;
     line-height: 49px;
     text-transform: uppercase;
 }
+
+.title {
+    font-weight: 700;
+    color: #EB3F57;
+}
+
+.heading {
+    font-weight: 400;
+    color: #454654;
+}
+
 
 /* Text */
 .text {
@@ -143,6 +157,32 @@ li {
 }
 
 
+/* Media object */
+.media {
+    display: flex;
+    column-gap: 110px;
+}
+
+.media__content {
+    flex-basis: 40%;
+}
+
+.media__content-heading {
+    padding-bottom: 51px;
+}
+
+.media__content-title {
+    padding-bottom: 20px;
+}
+
+.media__content-text {
+    padding-bottom: 30px;
+}
+
+.media__object-img {
+    max-width: 100%;
+}
+
 
 
 
@@ -150,6 +190,7 @@ li {
 
 
 /* Sections */
+
 
 /* Header */
 .header__inner {
@@ -162,6 +203,7 @@ li {
 .main {
     background-color: #F5F5FA;
 }
+
 
 /* Footer */
 .footer__top {
@@ -248,5 +290,4 @@ li {
 .about {
     height: 100vh;
     padding-top: 130px;
-    background-color: lime;
 }
