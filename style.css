@@ -49,6 +49,10 @@ li {
     flex-grow: 1;
 }
 
+.flipped {
+    flex-direction: row-reverse;
+}
+
 /* Main container */
 .container {
     width: var(--container);
@@ -61,6 +65,13 @@ li {
     margin-right: 0;
     padding-right: 0;
     margin-left: calc((100vw - var(--container) - var(--scrollbar)) / 2);
+}
+
+.container--align--left {
+    width: auto;
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: calc((100vw - var(--container) - var(--scrollbar)) / 2);
 }
 
 /* Align first flex-item to the left, the rest - to the right */
@@ -142,6 +153,11 @@ li {
     color: #454654;
 }
 
+.heading::after {
+    content: url('images/general/heading-arrow.svg');
+    display: block;
+}
+
 
 /* Text */
 .text {
@@ -179,11 +195,36 @@ li {
     padding-bottom: 30px;
 }
 
-.media__object-img {
-    max-width: 100%;
+.media__object {
+    /* create new stacking context to move image under 
+       the gradient element */
+    position: relative;
+    z-index: 1;
 }
 
+.media__object-img {
+    max-width: 100%;
+    vertical-align: bottom;
 
+    /* move image behind .media__object-img-gradient element
+       to make gradient overlay image */
+    z-index: -1;
+    position: relative;
+}
+
+.media__object-img-gradient {
+    background: linear-gradient(115.09deg, rgba(235, 63, 113, 0.4) 2.42%, rgba(29, 16, 68, 0.4) 82.18%, rgba(18, 14, 66, 0.4) 89.41%);
+}
+
+.media__object-img,
+.media__object-img-gradient {
+    border-radius: 0 50% 0 50% / 0 50% 0 50%;
+}
+
+.flipped .media__object-img,
+.flipped .media__object-img-gradient {
+    border-radius: 50% 0 50% 0 / 50% 0 50% 0;
+}
 
 
 
@@ -232,6 +273,7 @@ li {
 }
 
 
+/* Home page */
 /* Top */
 .top {
 
@@ -286,8 +328,18 @@ li {
 }
 
 
-/* About us */
-.about {
-    height: 100vh;
-    padding-top: 130px;
+/* Introduction */
+.intro {
+    padding: 130px 0 140px;
 }
+
+/* About */
+.intro {
+    padding: 130px 0 140px;
+}
+
+
+.home-heading {
+    margin-top: -64px;
+}
+/* End of Home page */
