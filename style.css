@@ -1,5 +1,5 @@
 :root {
-    --container: 1495px;
+    --container: 77.92%;
     --scrollbar: 15px;
 }
 
@@ -37,6 +37,11 @@ li {
 
 /* General styles */
 
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
+
 
 /* Stick footer to the bottom of the page */
 .wrapper {
@@ -53,14 +58,15 @@ li {
 .container {
     width: var(--container);
     margin: 0 auto;
-    padding: 0 50px;
+    /* padding: 0 50px; */
 }
 
 .container--align--right {
     width: auto;
     margin-right: 0;
     padding-right: 0;
-    margin-left: calc((100vw - var(--container) - var(--scrollbar)) / 2);
+    /* margin-left: calc((100vw - var(--container) - var(--scrollbar)) / 2); */
+    margin-left: calc((100vw - var(--container)) / 2);
 }
 
 .container--align--left {
@@ -355,17 +361,26 @@ li {
     padding: 130px 0 140px;
 }
 
+.about__list-item {
+    position: relative;
+}
+
 .about__list-item + .about__list-item {
     padding-top: 73px;
 }
 
 /* Use svg icons as custom list item bullets */
-.about__list-item:nth-child(1)::before {
+.about__list-item:nth-child(2)::before {
     content: url('images/home/about-list-icon1.svg');
 }
 
-.about__list-item:nth-child(2)::before {
+.about__list-item:nth-child(3)::before {
     content: url('images/home/about-list-icon2.svg');
+}
+
+.about__list-item::before {
+    position: absolute;
+    left: -100px;
 }
 
 .about__sub-title {
@@ -378,7 +393,7 @@ li {
 }
 
 .about .media {
-    column-gap: 153px;
+    column-gap: 310px;
 }
 
 /* End of Home page */

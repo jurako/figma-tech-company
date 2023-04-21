@@ -1,3 +1,28 @@
-Picture dimensions:
-Intro: 959px width x 649px height
-About: 960px width x 604px height
+TO DO:
+1) Fix border-radius of images
+2) Check, why upper menu is different in figma
+3) Check top section font-sizes (compared to figma)
+4) Check font-sizes in sections (compared to figma)
+5) Fix section image container sizes
+
+
+
+
+
+
+
+
+
+
+Container's numbers in figma:
+1) Canvas width: 1920px
+2) Container width: 1496px
+3) Percentage width: 1496px of 1920px = 77.92%
+
+Container's numbers in my laptop:
+1) Canvas width: 1536px;
+2) Container width: 1496px
+3) Percentage width: 1496px of 1536px = 97.40% <- should be this
+
+
+The problem was caused by extra safety-paddings (50px on each side).
