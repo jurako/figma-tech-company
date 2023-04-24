@@ -389,7 +389,7 @@ li {
 
 .about__list-item::before {
     position: absolute;
-    left: -100px;
+    left: -155px;
 }
 
 .about__sub-title {
