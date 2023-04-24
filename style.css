@@ -203,8 +203,12 @@ li {
 }
 
 .media__object {
-    /* create new stacking context to move image under 
-       the gradient element */
+    width: 50vw;
+    max-width: 1020px;
+    min-width: 500px;
+    flex-shrink: 0;
+
+    /* create new stacking context image gradient */
     position: relative;
     z-index: 1;
 }
@@ -213,8 +217,7 @@ li {
     max-width: 100%;
     vertical-align: bottom;
 
-    /* move image behind .media__object-img-gradient element
-       to make gradient overlay image */
+    /* move image behind gradient overlay */
     z-index: -1;
     position: relative;
 }
@@ -225,7 +228,7 @@ li {
 
 .media__object-img,
 .media__object-img-gradient {
-    border-radius: 0 50% 0 50% / 0 50% 0 50%;
+    border-radius: 0 324px 0 324px;
 }
 
 
@@ -242,7 +245,11 @@ li {
 
 .flipped .media__object-img,
 .flipped .media__object-img-gradient {
-    border-radius: 50% 0 50% 0 / 50% 0 50% 0;
+    border-radius: 324px 0 324px 0;
+}
+
+.flipped .heading::after {
+    transform: scaleX(-1);
 }
 
 
