@@ -191,7 +191,7 @@ li {
 }
 
 .media__content-heading {
-    padding-bottom: 51px;
+    padding-bottom: 40px;
 }
 
 .media__content-title {
@@ -214,7 +214,7 @@ li {
 }
 
 .media__object-img {
-    max-width: 100%;
+    width: 100%;
     vertical-align: bottom;
 
     /* move image behind gradient overlay */
@@ -239,17 +239,19 @@ li {
     flex-direction: row-reverse;
 }
 
-.flipped .heading {
-    text-align: right;
-}
-
 .flipped .media__object-img,
 .flipped .media__object-img-gradient {
     border-radius: 324px 0 324px 0;
 }
 
+.flipped .heading {
+    text-align: right;
+}
+
 .flipped .heading::after {
     transform: scaleX(-1);
+    width: min-content;
+    margin-left: auto;
 }
 
 
@@ -400,7 +402,7 @@ li {
 }
 
 .about .media {
-    column-gap: 310px;
+    column-gap: 320px;
 }
 
 /* End of Home page */
