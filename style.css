@@ -1,5 +1,6 @@
 :root {
     --container: 77.92%;
+    --container--small: 66.25%;
     --scrollbar: 15px;
 }
 
@@ -76,9 +77,8 @@ li {
     margin-right: calc((100vw - var(--container) - var(--scrollbar)) / 2);
 }
 
-.conainer--small {
-    padding-left: 121px;
-    padding-right: 105px;
+.container--small {
+    width: var(--container--small);
 }
 
 /* Align first flex-item to the left, the rest - to the right */
@@ -412,13 +412,16 @@ li {
 
 
 /* Products */
+.products {
+    padding-bottom: 125px;
+}
+
 .products__heading {
     padding: 87px 0 45px;
 }
 .products__inner {
     display: flex;
     gap: 80px;
-    padding-bottom: 125px;
 }
 
 .product__card {
@@ -470,6 +473,68 @@ li {
 
 .product__link:hover {
     border-bottom: none;
+}
+
+/* Contact */
+.contact {
+    padding-top: 118px;
+    padding-bottom: 137px;
+}
+
+.contact__inner {
+    display: flex;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.contact__form {
+    width: 60%;
+
+    padding: 62px 0 36px 40px;
+}
+
+.contact__form-title {
+    text-transform: capitalize;
+    padding-bottom: 15px;
+}
+
+.contact__form-text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 18px;
+
+    color: #67748E;
+
+    padding-bottom: 73px;
+}
+
+.contact__field-title {
+    font-weight: 700;
+    font-size: 12px;
+    /* line-height: 1px; */
+
+    color: #252F40;
+
+    padding-bottom: 4px;
+}
+
+.contact__field-title ~ .contact__field-title {
+    padding-top: 10px;
+}
+
+.contact__field {
+    color: #7878AB;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+
+    resize: none;
+    background-color: #F5F5FA;
+
+    width: 90%;
+    padding: 5px 0 5px 32px;
 }
 
 /* End of Home page */
