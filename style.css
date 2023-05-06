@@ -490,8 +490,7 @@ li {
 
 .contact__form {
     width: 60%;
-
-    padding: 62px 0 36px 40px;
+    padding: 62px 70px 36px 40px;
 }
 
 .contact__form-title {
@@ -512,29 +511,49 @@ li {
 .contact__field-title {
     font-weight: 700;
     font-size: 12px;
-    /* line-height: 1px; */
-
     color: #252F40;
 
-    padding-bottom: 4px;
+    padding-bottom: 6px;
 }
 
 .contact__field-title ~ .contact__field-title {
-    padding-top: 10px;
+    padding-top: 28px;
 }
 
 .contact__field {
-    color: #7878AB;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 40px;
+    line-height: 30px;
 
     resize: none;
     background-color: #F5F5FA;
+    border-radius: 15px;
+    border: none;
 
-    width: 90%;
+    box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5),
+                inset 2px 2px 4px rgba(170, 170, 204, 0.25),
+                inset 5px 5px 10px rgba(170, 170, 204, 0.5),
+                inset -5px -5px 10px #FFFFFF;
+
+    width: 100%;
     padding: 5px 0 5px 32px;
+}
+
+.contact__field,
+.contact__field::placeholder {
+    color: #7878AB;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.contact__field:focus::placeholder {
+    color: transparent;
+}
+
+.contact__send-btn {
+    display: inline-block;
+    margin-top: 26px;
+    float: right;
 }
 
 /* End of Home page */
