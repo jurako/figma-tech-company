@@ -546,14 +546,17 @@ li {
     font-size: 16px;
 }
 
-.contact__field:focus::placeholder {
-    color: transparent;
-}
-
 .contact__send-btn {
     display: inline-block;
     margin-top: 26px;
     float: right;
+}
+
+.contact__info-wrapper {
+    display: none;
+}
+.contact__info {
+    background: url(images/contact/contact.jpg) cover no-repeat;
 }
 
 /* End of Home page */
