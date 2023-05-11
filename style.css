@@ -419,6 +419,7 @@ li {
 .products__heading {
     padding: 87px 0 45px;
 }
+
 .products__inner {
     display: flex;
     gap: 80px;
@@ -461,7 +462,7 @@ li {
 
 .product__link {
     text-transform: uppercase;
-    color:#EB3F57;
+    color: #EB3F57;
 
     font-weight: 700;
     font-size: 14px;
@@ -486,6 +487,7 @@ li {
     background-color: #fff;
     border-radius: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
 }
 
 .contact__form {
@@ -529,9 +531,9 @@ li {
     border: none;
 
     box-shadow: inset -2px -2px 4px rgba(255, 255, 255, 0.5),
-                inset 2px 2px 4px rgba(170, 170, 204, 0.25),
-                inset 5px 5px 10px rgba(170, 170, 204, 0.5),
-                inset -5px -5px 10px #FFFFFF;
+        inset 2px 2px 4px rgba(170, 170, 204, 0.25),
+        inset 5px 5px 10px rgba(170, 170, 204, 0.5),
+        inset -5px -5px 10px #FFFFFF;
 
     width: 100%;
     padding: 5px 0 5px 32px;
@@ -552,11 +554,16 @@ li {
     float: right;
 }
 
-.contact__info-wrapper {
+/* .contact__info-wrapper {
     display: none;
-}
+} */
+
 .contact__info {
-    background: url(images/contact/contact.jpg) cover no-repeat;
+    flex-grow: 1;
+    background:
+        url(images/contact/contact-overlay.png) 0% 100% / auto no-repeat,
+        linear-gradient(104.58deg, rgb(235, 63, 94, 0.7) -2.26%, rgb(17, 8, 67, 0.7) 47.46%),
+        url(images/contact/contact.jpg) 0% 0% / cover no-repeat;
 }
 
 /* End of Home page */
