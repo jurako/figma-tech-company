@@ -555,11 +555,51 @@ li {
 }
 
 .contact__info {
+    padding-top: 173px;
+
     flex-grow: 1;
     background:
         url(images/contact/contact-overlay.png) 0% 0% / auto 100% no-repeat,
         linear-gradient(104.58deg, rgb(235, 63, 94, 0.7) -2.26%, rgb(17, 8, 67, 0.7) 47.46%),
         url(images/contact/contact.jpg) 0% 0% / cover no-repeat;
 }
+
+.contact__info-wrapper {
+    width: 365px;
+    margin-left: auto;
+    margin-right: 36px;
+    color: #fff;
+}
+
+.contact__info-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    /* line-height: 0px; */
+    text-transform: capitalize;
+    color: inherit;
+
+    padding-bottom: 8px;
+}
+
+.contact__info-text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+
+    padding-bottom: 34px;
+}
+
+.contact__info-item {
+    display: flex;
+    gap: 16px;
+
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 7px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact__info-item:nth-o {}
 
 /* End of Home page */
