@@ -99,6 +99,7 @@ li {
 
 /* Button */
 .btn {
+    min-width: 135px;
     padding: 11px 23px 10px;
 
     font-size: 14px;
@@ -638,3 +639,21 @@ li {
 }
 
 /* End of Home page */
+
+
+/* Responsive code */
+.mobile {
+    display: none;
+}
+
+
+/* Tablet breakpoint */
+@media(max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: initial;
+    }
+}
