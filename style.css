@@ -555,7 +555,10 @@ li {
 }
 
 .contact__info {
-    padding-top: 173px;
+    padding-top: 175px;
+    padding-right: 36px;
+
+    color: #fff;
 
     flex-grow: 1;
     background:
@@ -566,9 +569,7 @@ li {
 
 .contact__info-wrapper {
     width: 365px;
-    margin-left: auto;
-    margin-right: 36px;
-    color: #fff;
+    margin-left: 124px;
 }
 
 .contact__info-title {
@@ -583,7 +584,7 @@ li {
 }
 
 .contact__info-text {
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
     line-height: 26px;
 
@@ -637,30 +638,3 @@ li {
 }
 
 /* End of Home page */
-
-
-
-
-@media (min-width: 30em) {
-    html {
-      font-size: 125%;
-    }
-  }
-  
-  @media (min-width: 40em) {
-    html {
-      font-size: 150%;
-    }
-  }
-  
-  @media (min-width: 50em) {
-    html {
-      font-size: 175%;
-    }
-  }
-  
-  @media (min-width: 60em) {
-    html {
-      font-size: 200%;
-    }
-  }
