@@ -212,29 +212,26 @@ li {
     width: 50vw;
     max-width: 1020px;
     min-width: 500px;
-    flex-shrink: 0;
-
-    /* create new stacking context image gradient */
-    position: relative;
-    z-index: 1;
 }
 
 .media__object-img {
     width: 100%;
+    padding-top: 67%;
     vertical-align: bottom;
-
-    /* move image behind gradient overlay */
-    z-index: -1;
-    position: relative;
+    background: linear-gradient(115.09deg, rgba(235, 63, 113, 0.4) 2.42%, rgba(29, 16, 68, 0.4) 82.18%, rgba(18, 14, 66, 0.4) 89.41%),
+                url('images/home/intro.jpg');
 }
 
 .media__object-img-gradient {
-    background: linear-gradient(115.09deg, rgba(235, 63, 113, 0.4) 2.42%, rgba(29, 16, 68, 0.4) 82.18%, rgba(18, 14, 66, 0.4) 89.41%);
+    
 }
 
 .media__object-img,
 .media__object-img-gradient {
-    border-radius: 0 302px 0 302px;
+    /* border-radius: 0 302px 0 302px; */
+    /* border-radius: 31.49% 46.53%; */
+    border-top-right-radius: 31.49% 46.53%;
+    border-bottom-left-radius: 31.49% 46.53%;
 }
 
 
@@ -652,15 +649,6 @@ li {
     .mobile {
         display: initial;
     }
-
-    /*Media*/
-    .media {
-        flex-direction: column;
-    }
-
-    .media__object {
-        order: -1;
-    }
 }
 
 /* Additional media rules */
@@ -690,4 +678,27 @@ li {
         align-items: center;
     }
 
+}
+
+@media(max-width: 1060px) {
+    .container {
+        width: 94.27%;
+    }
+
+    .container--align--right {
+        margin: 0 auto;    
+    }
+
+    .media {
+        flex-direction: column-reverse;
+    }
+
+    .media__object {
+        width: auto;
+    }
+
+}
+
+
+@media(min-width: 1060px) {
 }
