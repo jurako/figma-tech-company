@@ -2,6 +2,12 @@
     --container: 77.92%;
     --container--small: 66.25%;
     --scrollbar: 15px;
+
+    --fs-xl: 2.25rem;
+    --fs-400: 1rem;
+    --fs-500: 1.125rem;
+    --fs-600: 1.25rem;
+    --fs-700: 1.4rem;
 }
 
 * {
@@ -146,7 +152,7 @@ li {
 .title,
 .heading {
     font-style: normal;
-    font-size: 36px;
+    font-size: var(--fs-xl);
     line-height: 49px;
     text-transform: uppercase;
 }
@@ -171,7 +177,7 @@ li {
 .text {
     font-style: normal;
     font-weight: 400;
-    font-size: 21px;
+    font-size: var(--fs-600);
     line-height: 29px;
     color: #000;
 }
@@ -189,7 +195,7 @@ li {
 /* Media object */
 .media {
     display: flex;
-    column-gap: 110px;
+    column-gap: clamp(50px, 70%, 110px);
 }
 
 .media__content {
@@ -209,15 +215,13 @@ li {
 }
 
 .media__object {
-    /* align-self: stretch; */
-    /* width: 50vw;
-    max-width: 1020px;
-    min-width: 500px; */
+    flex-shrink: 0;
+    text-align: right;
 }
 
 .media__object-img {
     max-width: 100%;
-    
+
 
     border-top-right-radius: 31.49% 46.53%;
     border-bottom-left-radius: 31.49% 46.53%;
@@ -357,7 +361,7 @@ li {
 
 .intro .media__object-img {
     background: linear-gradient(115.09deg, rgba(235, 63, 113, 0.4) 2.42%, rgba(29, 16, 68, 0.4) 82.18%, rgba(18, 14, 66, 0.4) 89.41%),
-                url('images/home/intro.jpg');
+        url('images/home/intro.jpg');
 }
 
 /* About */
@@ -402,7 +406,7 @@ li {
 
 .about .media__object-img {
     background: linear-gradient(115.09deg, rgba(235, 63, 113, 0.4) 2.42%, rgba(29, 16, 68, 0.4) 82.18%, rgba(18, 14, 66, 0.4) 89.41%),
-                url('images/home/about.jpg');
+        url('images/home/about.jpg');
 }
 
 
@@ -687,7 +691,7 @@ li {
     }
 
     .container--align--right {
-        margin: 0 auto;    
+        margin: 0 auto;
     }
 
     .media {
@@ -702,8 +706,21 @@ li {
 
 
 @media(max-width: 1700px) {
-    .text {font-size: 18px;}
-    .title {font-size: 30px;}
+    .text {
+        font-size: 18px;
+    }
 
-    .media {column-gap: 70px;}
+    .title {
+        font-size: 30px;
+    }
+
+    .media {
+        column-gap: 70px;
+    }
+}
+
+@media(max-width: 1600px) {
+    .media__object-img {
+        max-width: 80%;
+    }
 }
